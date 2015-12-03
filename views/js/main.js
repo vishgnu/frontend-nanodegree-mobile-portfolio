@@ -481,7 +481,6 @@ var resizePizzas = function (size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
-
 // get element for the pizzas before apping 100 
 var pizzasDiv = document.getElementById("randomPizzas");
 // append only in looping
@@ -536,6 +535,7 @@ function updatePositions() {
     for (var i = 0; i < items.length; i++) {
         items[i].style.left = items[i].basicLeft + 100 * phases[(i % 5)] + 'px';
     }
+
 
     // User Timing API to the rescue again. Seriously, it's worth learning.
     // Super easy to create custom metrics.

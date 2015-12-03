@@ -1,0 +1,34 @@
+﻿<h1>Changes for index.html:</h1>
+<ul>
+<li>added caching (the IIS config is in the web.config file e.g appache will require correct module and .htaccess file)</li>
+<li>resize images</li>
+<li>make google analytics and perf.js load async and put to end of page</li>
+<li>disabled font link and inlined page style</li>
+<li>set media for print.css</li>
+</ul>
+<p>For pagespeed testing the site can be opend from my azure instance running here
+http://udacity2.vishgnu.org/
+via 
+https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fudacity2.vishgnu.org%2F&amp;tab=mobile</p>
+<h1>Changes for pizza resize in main.js</h1>
+<ul>
+<li>change all jqeury get for ids to  getElementById()</li>
+<li>removed size calculation completetly from size setting loop (pizzacontainers[i].style.width = newwidth;)</li>
+<li>calculate size based on first pizza reuse for all</li>
+<li>get looping parameters from already loaded list that need to be iterated later</li>
+</ul>
+<h1>Changes for 60FPS scrolling</h1>
+<ol>
+<li>updatePositions()</li>
+<li>removed calculation of sin values from looping of positionsetting (only 5 different values so they are precalulated)</li>
+<li>getting scrollTop value only once </li>
+<li>change jquery to geElementsByClassname for .mover
+*
+2.addEventListener('DOMContentLoaded', function () </li>
+<li>reduce number of pizzas to 50</li>
+<li>take jquery to get movingpizzas object out of looping to get only once and use for append</li>
+</ol>
+<h1>Misc</h1>
+<ul>
+<li>changed pizzageneration loop (not relevant for resize but pageload)</li>
+</ul>
