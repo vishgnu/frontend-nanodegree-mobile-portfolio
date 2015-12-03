@@ -29,11 +29,14 @@ form {
   font-weight: 800;
 }
 
+//**add backface-vis to enhance gpu usage */
 .mover {
   position: fixed;
   width: 256px;
   z-index: -1;
+  backface-visibility: hidden;
 }
+
 
 .randomPizzaContainer {
   float: left;
